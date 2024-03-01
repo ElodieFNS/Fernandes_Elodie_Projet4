@@ -96,3 +96,37 @@ h1{
     text-decoration: none;
     color: white;
 }
+
+/* Fonctionnement */
+
+.fonctionnement{
+    margin: 1rem;
+}
+
+.fonctionnement h2{
+    margin-top: 2.5rem;
+}
+
+.fonctionnement_boutons {
+    
+}
+
+.fonctionnement_bouton{
+    display: flex;
+    align-items: center;
+    background-color: $background-color;
+    border-radius: 15px;
+    width: 300px;
+    height: 65px;
+}
+
+.fonctionnement_bouton p:first-child{
+    background-color: #9356DC;
+    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
