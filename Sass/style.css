@@ -26,12 +26,11 @@ h1 {
   background-color: #EAEAEA;
   gap: 1rem;
   box-shadow: 0px 0px 10px -1px #585858;
+  margin-bottom: 3px;
 }
-
 .place i {
   color: #353535;
 }
-
 .place p {
   font-weight: bold;
 }
@@ -43,7 +42,6 @@ h1 {
   align-items: center;
   flex-direction: column;
 }
-
 .reservation h2 {
   margin: 0;
   padding-top: 2rem;
@@ -52,7 +50,6 @@ h1 {
   text-align: center;
   font-size: 24px;
 }
-
 .reservation p {
   font-weight: 300;
   text-align: center;
@@ -71,10 +68,6 @@ h1 {
   box-shadow: 0px 10px 20px -13px #585858;
   margin-top: 1rem;
   margin-bottom: 3rem;
-}
-
-.reservation_bouton a {
-  text-decoration: none;
   color: white;
 }
 
@@ -87,22 +80,122 @@ h1 {
   margin-top: 2.5rem;
 }
 
-.fonctionnement_bouton {
+.fonctionnement_boutons {
   display: flex;
-  align-items: center;
-  background-color: #F6F6F6;
-  border-radius: 15px;
-  width: 300px;
-  height: 65px;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.fonctionnement_bouton p:first-child {
-  background-color: #9356DC;
-  border-radius: 20px;
-  width: 20px;
-  height: 20px;
+.fonctionnement_bouton_relative {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.bouton_1 {
+  /* position: relative; */
+  overflow: hidden;
+  height: 72px;
+  width: 322px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0px 0px 19px 1px rgba(88, 88, 88, 0.2);
+}
+.bouton_1 i {
+  padding-left: 2rem;
+  color: #7E7E7E;
+}
+.bouton_1 p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bouton_1::before {
+  content: "1";
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 24px;
+  left: -1px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: white;
+}
+
+.bouton_2 {
+  /* position: relative; */
+  overflow: hidden;
+  height: 72px;
+  width: 322px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0px 0px 19px 1px rgba(88, 88, 88, 0.2);
+}
+.bouton_2 i {
+  padding-left: 2rem;
+  color: #7E7E7E;
+}
+.bouton_2 p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bouton_2::before {
+  content: "2";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 24px;
+  left: -1px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  border-radius: 20px;
+  color: white;
+}
+
+.bouton_3 {
+  /* position: relative; */
+  overflow: hidden;
+  height: 72px;
+  width: 322px;
+  background-color: #F6F6F6;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0px 0px 19px 1px rgba(88, 88, 88, 0.2);
+}
+.bouton_3 i {
+  padding-left: 2rem;
+  color: #7E7E7E;
+}
+.bouton_3 p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bouton_3::before {
+  content: "3";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 24px;
+  left: -1px;
+  width: 24px;
+  height: 24px;
+  background-color: #9356DC;
+  border-radius: 20px;
   color: white;
 }/*# sourceMappingURL=style.css.map */
