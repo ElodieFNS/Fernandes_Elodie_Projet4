@@ -68,16 +68,18 @@ h1 {
   box-shadow: 0px 10px 20px -13px #585858;
   margin-top: 1rem;
   margin-bottom: 3rem;
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Fonctionnement */
 .fonctionnement {
   margin: 1rem;
+  margin-bottom: 4rem;
 }
 
 .fonctionnement h2 {
   margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .fonctionnement_boutons {
@@ -102,7 +104,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 2rem;
-  box-shadow: 0px 0px 19px 1px rgba(88, 88, 88, 0.2);
+  box-shadow: 0px 0px 19px 1px #cecece;
 }
 .bouton i {
   padding-left: 2rem;
@@ -124,7 +126,7 @@ h1 {
   height: 24px;
   background-color: #9356DC;
   border-radius: 20px;
-  color: white;
+  color: #FFFFFF;
 }
 
 .marqueur1::before {
@@ -137,4 +139,148 @@ h1 {
 
 .marqueur3::before {
   content: "3";
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Restaurants */
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 1rem;
+}
+.restaurants h2 {
+  padding-top: 1rem;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cartes_restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carte_restaurant {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  width: 340px;
+  height: 251px;
+}
+.carte_restaurant a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.carte_restaurant_nouveau_relatif {
+  position: relative;
+}
+
+.carte_restaurant_img img {
+  width: 340px;
+  height: 179px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.carte_restaurant_img_after img {
+  width: 340px;
+  height: 179px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.carte_restaurant_img_after::after {
+  content: "Nouveau";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 12px;
+  left: 250px;
+  width: 80px;
+  height: 29px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  color: #008766;
+}
+
+.carte_restaurant_description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carte_restaurant_description div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+.carte_restaurant_description div h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.carte_restaurant_description div p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.carte_restaurant_coeur {
+  padding: 0;
+}
+.carte_restaurant_coeur .coeur_vide {
+  color: #000000;
+  z-index: 0;
+}
+.carte_restaurant_coeur .coeur_plein {
+  color: transparent;
+  z-index: 1;
+  background-image: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  display: none;
+}
+
+.carte_restaurant_coeur:hover .coeur_vide {
+  display: none;
+  color: #000000;
+}
+.carte_restaurant_coeur:hover .coeur_plein {
+  display: inline;
+}
+
+/* Footer */
+footer {
+  background-color: #353535;
+  padding: 1rem;
+}
+footer .footer_titre {
+  margin: 0;
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+footer nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+footer nav ul li a i {
+  padding-right: 1rem;
+}
+
+/* La palette du gout *//*# sourceMappingURL=style.css.map */
