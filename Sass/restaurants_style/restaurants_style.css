@@ -1,0 +1,13 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.restaurant_categ_entiere {
+  animation: fade-in auto linear both;
+  animation-timeline: scroll();
+  animation-range: 0% 500px;
+}/*# sourceMappingURL=restaurants_style.css.map */

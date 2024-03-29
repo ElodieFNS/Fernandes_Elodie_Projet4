@@ -1,0 +1,35 @@
+@mixin flex_all_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin margin_zero {
+    margin: 0;
+}
+
+@mixin bouton_degrade_rose_violet_arrondi {
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    display: flex;
+    width: 220px;
+    height: 50px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0px 10px 20px -13px #585858;
+    border: none;
+}
+
+@mixin bouton_degrade_rose_violet_arrondi_hover {
+    background: linear-gradient(180deg, rgb(255, 143, 223) 0%, rgb(155, 103, 218) 100%);
+    display: flex;
+    width: 220px;
+    height: 50px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0px 10px 20px -10px #000000;
+    border: none;
+}
