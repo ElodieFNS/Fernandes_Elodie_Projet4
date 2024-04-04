@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "name": "projet_de_fin_4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass":"sass --watch ./Sass/style.scss:./Sass/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
