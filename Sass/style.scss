@@ -12,23 +12,71 @@ body{
 }
 
 /* Styles pour le loader */
-.spinner {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 9px solid;
-    border-color: #dbdcef;
-    border-right-color: #474bff;
-    animation: spinner 1s infinite linear;
-    animation-duration: 3s;
- }
- 
- @keyframes spinner {
-    to {
-       transform: rotate(1turn);
+@keyframes loader {
+    from {
+        opacity: 1;
     }
- }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+main {
+    background-color: #F6F6F6;
+}
 
+.loader {
+    background-color: #EAEAEA;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    animation: loader 1s 2s forwards;
+}
+
+.load {
+    width: 15vh;
+    height: 24vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+}
+.load__bar {
+    height: 100%;
+    width: 3vh;
+    animation: bars 600ms backwards infinite ease-in-out alternate;
+}
+.load__bar--1 {
+    animation-delay: 200ms;
+}
+.load__bar--2 {
+    animation-delay: 400ms;
+}
+.load__bar--3 {
+    animation-delay: 600ms;
+}
+.load__bar--1 {
+    background-color: #9356dc;
+}
+.load__bar--2 {
+    background-color: #d069db;
+}
+.load__bar--3 {
+    background-color: #ff79da;
+}
 
 /*Header*/
 
@@ -331,18 +379,28 @@ footer{
     }
 }
 
-/* Restaurants */
+/* Restaurants */ 
+.restaurant_categ_entiere{
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
 
-@keyframes fade-in {
-    from { opacity: 0 }
-    to   { opacity: 1 }
-  }
-  
-  .restaurant_categ_entiere{
-    animation: fade-in auto linear both;
-    animation-timeline: scroll();
-    animation-range: 10% 200px;
-  }
+#entrees {
+    animation-delay: 0.5s;
+}
+
+#plats {
+    animation-delay: 1s;
+}
+
+#desserts {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 .header_restaurant{
     display: flex;
@@ -528,16 +586,14 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-color: #FFFFFF;
+        padding-bottom: 2rem;
+        margin-left: 0;
+        margin-right: 0;
 
         h2{
-            margin-right: 53rem;
+            margin-right: 56rem;
         }
-    }
-
-    .fonctionnement_boutons {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
     }
 
     .bouton::before{
@@ -545,23 +601,23 @@ footer{
     }
 
     .fonctionnement_boutons {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 20px;
-        grid-row-gap: 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
       }
     
     .bouton {
         margin-right: 20px;
+        width: 20rem;
       }
 
     .cartes_restaurants{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 28px;
-        grid-row-gap: 28px;
+        grid-column-gap: 100px;
+        grid-row-gap: 50px;
     }
 
     .restaurants {
@@ -572,16 +628,8 @@ footer{
         padding-bottom: 2rem;
 
         h2{
-            margin-right: 55rem;
+            margin-right: 59rem;
         }
-    }
-
-    .cartes_restaurants {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 28px;
-        grid-row-gap: 28px;
     }
 
     .carte_restaurant {
