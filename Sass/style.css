@@ -25,10 +25,6 @@ body {
     transform: scaleY(1);
   }
 }
-main {
-  background-color: #F6F6F6;
-}
-
 .loader {
   background-color: #EAEAEA;
   position: fixed;
@@ -39,8 +35,7 @@ main {
   z-index: 99;
   animation: loader 1s 2s forwards;
 }
-
-.load {
+.loader .load {
   width: 15vh;
   height: 24vh;
   position: absolute;
@@ -50,34 +45,21 @@ main {
   display: flex;
   justify-content: space-evenly;
 }
-
-.load__bar {
+.loader .load .load__bar {
   height: 100%;
   width: 3vh;
   animation: bars 600ms backwards infinite ease-in-out alternate;
 }
-
-.load__bar--1 {
+.loader .load .load__bar--1 {
   animation-delay: 200ms;
-}
-
-.load__bar--2 {
-  animation-delay: 400ms;
-}
-
-.load__bar--3 {
-  animation-delay: 600ms;
-}
-
-.load__bar--1 {
   background-color: #9356dc;
 }
-
-.load__bar--2 {
+.loader .load .load__bar--2 {
+  animation-delay: 400ms;
   background-color: #d069db;
 }
-
-.load__bar--3 {
+.loader .load .load__bar--3 {
+  animation-delay: 600ms;
   background-color: #ff79da;
 }
 
@@ -145,7 +127,6 @@ h1 {
   font-weight: 500;
   font-size: 16px;
 }
-
 .reservation_bouton:hover {
   background: linear-gradient(180deg, rgb(255, 143, 223) 0%, rgb(155, 103, 218) 100%);
   display: flex;
@@ -171,7 +152,6 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-
 .fonctionnement h2 {
   margin-top: 2.5rem;
   margin-bottom: 1.5rem;
@@ -195,12 +175,11 @@ h1 {
   border-radius: 20px;
   border: none;
   gap: 4%;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   box-shadow: 0 4px 10px 0 #d5d5d5;
   font-weight: 500;
   position: relative;
 }
-
 .bouton:before {
   content: counter(step-counter);
   counter-increment: step-counter;
@@ -213,7 +192,7 @@ h1 {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #FFFFFF;
   background-color: #9356dc;
 }
 
@@ -274,8 +253,7 @@ h1 {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-
-.carte_restaurant_img_after::after {
+.carte_restaurant_img_after:after {
   content: "Nouveau";
   position: absolute;
   display: flex;
@@ -334,14 +312,9 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
 }
-
 .rempli:hover {
   font-size: 1.53rem;
   opacity: 1;
-  color: transparent;
-  background-image: linear-gradient(180deg, rgb(255, 143, 223) 0%, rgb(155, 103, 218) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 /* Footer */
@@ -453,8 +426,7 @@ footer nav ul li a i {
   text-transform: uppercase;
   padding-left: 1rem;
 }
-
-.restaurant_categ::after {
+.restaurant_categ:after {
   content: "";
   position: absolute;
   top: 40px;
@@ -490,7 +462,6 @@ footer nav ul li a i {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  height: 69;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 1rem;
@@ -528,7 +499,6 @@ footer nav ul li a i {
   background-color: #99E2D0;
   color: #FFFFFF;
   border-radius: 0 15px 15px 0;
-  align-items: center;
   position: absolute;
   right: 0;
   transform: translateX(69px);
@@ -579,9 +549,6 @@ footer nav ul li a i {
   .fonctionnement h2 {
     margin-right: 56rem;
   }
-  .bouton::before {
-    left: -12px;
-  }
   .fonctionnement_boutons {
     display: flex;
     flex-direction: row;
@@ -591,6 +558,9 @@ footer nav ul li a i {
   .bouton {
     margin-right: 20px;
     width: 20rem;
+  }
+  .boutonbefore {
+    left: -12px;
   }
   .cartes_restaurants {
     display: grid;
@@ -619,8 +589,8 @@ footer nav ul li a i {
     width: 490px;
     height: 185px;
   }
-  .carte_restaurant_img_after::after {
-    left: 394px;
+  .carte_restaurant_img_after:after {
+    left: 390px;
   }
   .carte_restaurant_img img {
     width: 490px;
