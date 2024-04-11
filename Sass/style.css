@@ -228,7 +228,6 @@ h1 {
 .carte_restaurant {
   background-color: #FFFFFF;
   border-radius: 15px;
-  width: 340px;
   height: 251px;
 }
 .carte_restaurant a {
@@ -241,14 +240,14 @@ h1 {
 }
 
 .carte_restaurant_img img {
-  width: 340px;
+  width: 100%;
   height: 179px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
 .carte_restaurant_img_after img {
-  width: 340px;
+  width: 100%;
   height: 179px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
@@ -260,8 +259,8 @@ h1 {
   align-items: center;
   justify-content: center;
   top: 12px;
-  left: 250px;
-  width: 80px;
+  left: 70%;
+  width: 25%;
   height: 29px;
   font-size: 14px;
   font-weight: 500;
@@ -377,9 +376,7 @@ footer nav ul li a i {
   display: flex;
   align-items: center;
   margin-left: 1rem;
-}
-.header_restaurant a {
-  margin-right: 4rem;
+  gap: 15%;
 }
 .header_restaurant a i {
   color: #353535;
@@ -390,7 +387,7 @@ footer nav ul li a i {
 }
 
 .restaurant_img {
-  width: 375px;
+  width: 100%;
   height: 275px;
   object-fit: cover;
 }
@@ -445,7 +442,7 @@ footer nav ul li a i {
 
 .restaurant_un_plat {
   background-color: #FFFFFF;
-  width: 349px;
+  width: 100%;
   height: 69px;
   display: flex;
   flex-direction: row;
