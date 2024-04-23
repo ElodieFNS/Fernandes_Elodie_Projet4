@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 /* Styles pour le loader */
 @keyframes loader {
   from {
@@ -98,9 +103,6 @@ h1 {
 }
 .reservation h2 {
   margin: 0;
-  padding-top: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
   text-align: center;
   font-size: 24px;
 }
@@ -122,7 +124,6 @@ h1 {
   box-shadow: 0px 10px 20px -13px #585858;
   border: none;
   margin-top: 1rem;
-  margin-bottom: 3rem;
   color: #FFFFFF;
   font-weight: 500;
   font-size: 16px;
@@ -138,40 +139,31 @@ h1 {
   border-radius: 40px;
   box-shadow: 0px 10px 20px -10px #000000;
   border: none;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  color: #FFFFFF;
-  font-weight: 500;
-  font-size: 16px;
+}
+
+.section {
+  padding: 3rem 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
 }
 
 /* Fonctionnement */
-.fonctionnement {
-  margin: 1rem;
-  margin-bottom: 4rem;
-  display: flex;
-  flex-direction: column;
-}
-.fonctionnement h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .fonctionnement_boutons {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  width: 85%;
-  padding-bottom: 10px;
-  margin: auto;
+  justify-content: space-between;
   counter-reset: step-counter;
+  gap: 1.5rem;
 }
 
 .bouton {
   display: flex;
   align-items: center;
   height: 72px;
-  margin: 15px 0;
+  margin-left: 15px;
   border-radius: 20px;
   border: none;
   gap: 4%;
@@ -211,28 +203,22 @@ h1 {
 /* Restaurants */
 .restaurants {
   background-color: #F6F6F6;
-  padding: 1rem;
-}
-.restaurants h2 {
-  padding-top: 1rem;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .cartes_restaurants {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .carte_restaurant {
   background-color: #FFFFFF;
   border-radius: 15px;
-  height: 251px;
 }
 .carte_restaurant a {
   text-decoration: none;
   color: #000000;
+  display: block;
 }
 
 .carte_restaurant_nouveau_relatif {
@@ -271,15 +257,15 @@ h1 {
 
 .carte_restaurant_description {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+  padding-top: 0.5rem;
 }
 .carte_restaurant_description div {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
 }
 .carte_restaurant_description div h3 {
   margin: 0;
@@ -295,7 +281,9 @@ h1 {
 .coeur {
   display: flex;
   align-items: flex-end;
-  margin-right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
 }
 .coeur i {
   position: absolute;
@@ -310,9 +298,11 @@ h1 {
   background-image: linear-gradient(180deg, rgb(255, 143, 223) 0%, rgb(155, 103, 218) 100%);
   background-clip: text;
   -webkit-background-clip: text;
+  left: -0.05rem;
+  bottom: -0.05rem;
 }
 .rempli:hover {
-  font-size: 1.53rem;
+  font-size: 1.6rem;
   opacity: 1;
 }
 
@@ -534,26 +524,13 @@ footer nav ul li a i {
     font-weight: 500;
     font-style: normal;
   }
-  .fonctionnement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFFFFF;
-    padding-bottom: 2rem;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .fonctionnement h2 {
-    margin-right: 56rem;
+  .container {
+    margin: auto;
   }
   .fonctionnement_boutons {
-    display: flex;
     flex-direction: row;
-    gap: 25px;
-    justify-content: center;
   }
   .bouton {
-    margin-right: 20px;
     width: 20rem;
   }
   .boutonbefore {
@@ -563,38 +540,10 @@ footer nav ul li a i {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 100px;
-    grid-row-gap: 50px;
-  }
-  .restaurants {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-  }
-  .restaurants h2 {
-    margin-right: 59rem;
   }
   .carte_restaurant {
     background-color: #FFFFFF;
     border-radius: 15px;
-    width: 490px;
-    height: 270px;
-  }
-  .carte_restaurant_img_after img {
-    width: 490px;
-    height: 185px;
-  }
-  .carte_restaurant_img_after:after {
-    left: 390px;
-  }
-  .carte_restaurant_img img {
-    width: 490px;
-    height: 185px;
-  }
-  .carte_restaurant_description div h3 {
-    padding-top: 0.3rem;
   }
   footer {
     display: flex;
@@ -624,7 +573,8 @@ footer nav ul li a i {
     height: 383px;
   }
   .restaurant_carte {
-    width: 1055px;
+    width: 100%;
+    max-width: 1055px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -634,6 +584,79 @@ footer nav ul li a i {
   }
   .restaurant_titre .coeur {
     margin-left: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .reservation h2 {
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .reservation p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+  .main_restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+  }
+  .reservation_bouton {
+    font-weight: 500;
+    font-style: normal;
+  }
+  .cartes_restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .carte_restaurant {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 460px;
+  }
+  .carte_restaurant_img img, .carte_restaurant_img_after img {
+    width: 100%;
+    height: 185px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-right: 3rem;
+    padding-top: 2rem;
+  }
+  footer nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 60px;
+    flex-direction: row;
+    padding-right: 3rem;
+  }
+  .header_restaurant {
+    display: grid;
+    grid-template-columns: 1% 99%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+  }
+  .restaurant_img {
+    width: 100%;
+    height: 383px;
+  }
+  .restaurant_un_plat {
+    width: 634px;
+  }
+  .restaurant_titre .coeur {
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 1100px) {
+  .carte_restaurant {
+    width: 490px;
   }
 }
 
