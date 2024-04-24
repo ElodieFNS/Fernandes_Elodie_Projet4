@@ -168,8 +168,8 @@ h1{
     position: relative;
 
     &:before{
-        content: counter(step-counter);
-        counter-increment: step-counter;
+        content: counter(step-counter); //insérer du contenu généré
+        counter-increment: step-counter; //incrémenter le compteur spécifié
         display: flex;
         align-items: center;
         justify-content: center;
@@ -182,6 +182,12 @@ h1{
         color: $color-white;
         background-color: #9356dc;
     }
+    
+}
+
+.bouton:hover .icon_fonctionnement,
+.bouton:focus .icon_fonctionnement{
+    color: #9356DC;
 }
 
 .icon_fonctionnement{
@@ -190,11 +196,6 @@ h1{
     font-size: 1.5rem;
 }
 
-.icon_violet_fonctionnement{
-    margin-left: 2rem;
-    color: #9356DC;
-    font-size: 1.5rem;
-}
 /* Restaurants */
 
 .restaurants{
@@ -407,6 +408,8 @@ footer{
     z-index: 1;
     position: relative;
     background: $color-grey;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 .restaurant_titre{
@@ -595,15 +598,21 @@ footer{
         padding-top: 2rem;
 
         nav{
+            display: flex;
+            flex-direction: row;
+            padding-right: 3rem;
+            gap: 3.5rem;
             ul{
-                list-style-type: none;
-                padding-left: 0;
+                gap: 20px;
                 display: flex;
-                gap: 60px;
                 flex-direction: row;
-                padding-right: 3rem;
             }
         }
+    }
+
+    .footer_icon{
+        display: flex;
+        align-items: center;
     }
 
     .header_restaurant {
@@ -692,16 +701,16 @@ footer{
         padding-right: 3rem;
         padding-top: 2rem;
 
-        nav{
-            ul{
-                list-style-type: none;
-                padding-left: 0;
-                display: flex;
-                gap: 60px;
-                flex-direction: row;
-                padding-right: 3rem;
-            }
-        }
+        // nav{
+        //     ul{
+        //         list-style-type: none;
+        //         padding-left: 0;
+        //         display: flex;
+        //         gap: 60px;
+        //         flex-direction: row;
+        //         padding-right: 3rem;
+        //     }
+        // }
     }
 
     .header_restaurant {

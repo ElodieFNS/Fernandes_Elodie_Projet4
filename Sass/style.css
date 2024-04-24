@@ -188,15 +188,14 @@ h1 {
   background-color: #9356dc;
 }
 
+.bouton:hover .icon_fonctionnement,
+.bouton:focus .icon_fonctionnement {
+  color: #9356DC;
+}
+
 .icon_fonctionnement {
   margin-left: 2rem;
   color: #7E7E7E;
-  font-size: 1.5rem;
-}
-
-.icon_violet_fonctionnement {
-  margin-left: 2rem;
-  color: #9356DC;
   font-size: 1.5rem;
 }
 
@@ -388,6 +387,8 @@ footer nav ul li a i {
   z-index: 1;
   position: relative;
   background: #F6F6F6;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .restaurant_titre {
@@ -552,13 +553,20 @@ footer nav ul li a i {
     padding-right: 3rem;
     padding-top: 2rem;
   }
-  footer nav ul {
-    list-style-type: none;
-    padding-left: 0;
+  footer nav {
     display: flex;
-    gap: 60px;
     flex-direction: row;
     padding-right: 3rem;
+    gap: 3.5rem;
+  }
+  footer nav ul {
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer_icon {
+    display: flex;
+    align-items: center;
   }
   .header_restaurant {
     display: grid;
@@ -626,14 +634,6 @@ footer nav ul li a i {
     align-items: center;
     padding-right: 3rem;
     padding-top: 2rem;
-  }
-  footer nav ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    gap: 60px;
-    flex-direction: row;
-    padding-right: 3rem;
   }
   .header_restaurant {
     display: grid;
